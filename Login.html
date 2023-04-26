@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="Login.css">
+    <script>
+        function validate(){
+            const name=document.getElementById(`text`);
+            const email=document.getElementById(`email`);
+            const password=document.getElementById(`password`);
+
+            if(name.value == "" || email.value == "" || password.value == ""){
+                alert("Enter all fields");
+            }
+            else{
+                document.write("Success")
+            }
+        }
+    </script>
+</head>
+<body>
+    <center>
+  <div class="form-box">
+    <form class="form">
+        <span class="title">Sign Up</span>
+        <span class="subtitle">Create a free account with your email</span>
+        <div class="form-container">
+            <input id="text" class="input" placeholder="Enter Name">
+            <input id="email" class="input" placeholder="Enter Email">
+            <input id="password" class="input" placeholder="Enter Password">
+            <!-- <input type="text" name="name" placeholder="Enter Name">
+            <input type="password" name="password" placeholder="Enter Password">
+            <input type="email" name="email" placeholder="Enter Email"> -->
+        </div>
+        <button onclick="validate()" type="submit">Sign up</button>
+    </form>
+    <div class="form-section">
+        <p>Have a account ? <a href="">Log in</a></p>
+    </div>
+  </div>  
+    </center>
+</body>
+</html>
