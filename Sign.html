@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Here</title>
+    <link rel="stylesheet" href="Sign.css">
+    
+</head>
+<body>
+    
+   <div class="form-box">
+                <form name="myForm" action="dashboard.html" onsubmit="return validate()" method="get">
+                    <div class="title">Register Here</div>
+                    <div class="form-container">
+                        <div>
+                        <label class="form-group">Name</label><br>
+                        <input type="text" id="name" name="name" placeholder="Enter Name" required>
+                        </div><p></p>
+                         <div>
+                        <label class="form-group">Email</label><br>
+                        <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                         </div><p></p>
+                       
+                        <div>
+                        <label class="form-group">Date of Birth</label><br>
+                        <input type="date" id="dob" name="dob" required>
+                        </div><p></p>
+                        <div>
+                            <label class="form-group">Gender</label><br>
+                           <input type="text" id="gender" name="gender" placeholder="Male or Female" required>
+                        </div><p></p>
+                        <div>
+                        <label class="form-group">Password</label><br>
+                        <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                        </div><p></p>
+                        <div>
+                        <label class="form-group">Confirm Password</label><br>
+                        <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" required>
+                        </div><p></p><p></p>
+                        <button>Sign in</button>
+                     </div><p></p>
+                     <div>
+                     <p>Already Have a account ? <a href="Login.html">Log in</a></p>
+                    </div>
+                </form>
+                
+              </div>  
+     
+        </div>
+    </div>
+</div>  
+<script src="script.js"></script>  
+</body>
+</html>
