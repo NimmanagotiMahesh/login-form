@@ -1,57 +1,40 @@
 function validate(){
-    const myForm = document.getElementById("myForm");
-    const name = document.getElementById("name");
-    const email = document.getElementById("email");
-    const dob = document.getElementById("dob");
-    const gender = document.getElementById("gender");
-    const password = document.getElementById("password");
-    const cpassword = document.getElementById("cpassword");
-
-    myForm.addEventListener(`submit` , (e) =>{
-        e.preventDefault();
-
-        checkInputs();
-    });
-    function checkInputs(){
-
-        const nameValue = name.value.trim();
-        const emailValue= email.value.trim();
-        const dobValue = dob.value.trim();
-        const genderValue = gender.value.trim();
-        const passwordValue = password.value.trim();
-        const cpasswordValue = cpassword.value.trim();
-
-        if(nameValue === ""){
-            
-            setErrorFor(name,"Name cannot be blank");
-            
-        }
-        else{
-            setSuccessFor(name);
-            window.location.replace("Dashboard.html");
-        }
-
+    let name = document.forms["myForm"]["name"].value;
+    let email = document.forms["myForm"]["email"].value;
+    let dob = document.forms["myForm"]["dob"].value;
+    let gender = document.forms["myForm"]["gender"].value;
+    let password = document.forms["myForm"]["password"].value;
+    let cpassword = document.forms["myForm"]["cpassword"].value;
+    
+    if (name == "") {
+      alert("Name must be filled out");
+      return false;
     }
-    function setErrorFor(input,message){
-        const formGroup = input.parentElement;
-        const small = formGroup.QuerySelector("small");
-
-        small.innerText = message;
-
-        formGroup.className = "form-group error";
+    if (email == "") {
+        alert("Email must be filled out");
+        return false;
     }
-    function setSuccessFor(input){
-        const formGroup = input.parentElement;
-        formGroup.className = "form-group success";
-    }
-    // if(password.length !=0){
-    //     if(password==cpassword){
-    //         alert("Passwords are match");
-    //         window.location.replace("Dashboard.html");
-    //         return false;
-    //     }
-    //     else{
-    //         alert("Passwords are not match");
-    //     }
-    // 
+    if (dob == "") {
+       alert("Date of Birth must be filled out");
+        return false;
+      }
+    if (gender == "") {
+        alert("Gender must be filled out");
+        return false;
+      }
+    if (password == "") {
+        alert("Password must be filled out");
+        if(password.length < 6 || password.length >=16){
+          alert("Enter Valid Password");
+          }
+        return false;
+      }
+      if(cpassword == ""){
+        alert("Enter Confirm Password");
+        return false;
+      } 
+      if (cpassword != password) {
+        alert("Password and Confirm Password must be same");
+       return false;
+      }
 }
